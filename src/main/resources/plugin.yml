@@ -1,0 +1,12 @@
+name: Transacto
+version: ${project.version}
+main: me.panem.transacto.Transacto
+api-version: 1.16
+prefix: Transacto
+authors: [ Panem ]
+description: Transacto - Your transaction system
+website: https://github.com/somekindopanem/transacto
+
+commands:
+  transacto:
+    description: Shows whether Transacto runs on the server
