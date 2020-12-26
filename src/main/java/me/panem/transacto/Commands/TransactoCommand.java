@@ -16,13 +16,6 @@ public class TransactoCommand implements CommandExecutor
             Player player = (Player) sender;
             player.sendRawMessage("§7[§6Transacto§7] §aTransacto is running on this server.");
         }
-
-
-
-
-
-
-
         return true;
     }
 }
