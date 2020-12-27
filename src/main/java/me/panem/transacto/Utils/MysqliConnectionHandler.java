@@ -18,6 +18,7 @@ public class MysqliConnectionHandler
 
     public boolean TestMysqliConnection() {
         // TODO Implement
+
         return true;
     }
 

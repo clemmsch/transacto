@@ -29,7 +29,13 @@ public class TestMySqliCommand implements CommandExecutor
         MysqliConnectionHandler handler = new MysqliConnectionHandler();
         if (handler.TestMysqliConnection()) {
             // It has not failed
+            // TODO (!!!!) REMOVE THIS THIS IS VERY DANGEROUS!!!!!!!!
             sender.sendMessage("§6§lTransacto-Mysqli-Connection-Tester: \n §aSuccessfully connected!");
+            sender.sendMessage("§6 Host: " + handler.getMysqliHost());
+            sender.sendMessage("§b Username: " + handler.getMysqliUsername());
+            sender.sendMessage("§e Password: " + handler.getMysqliPassword());
+            sender.sendMessage("§3 Port: " + handler.getMysqliPort());
+            sender.sendMessage("§4 Socket: " + handler.getMysqliSocket());
 
         } else {
             sender.sendMessage("§6§lTransacto-Mysqli-Connection-Tester: \n §cFailed to connect!");

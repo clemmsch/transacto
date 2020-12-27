@@ -5,13 +5,11 @@ import me.panem.transacto.Commands.TransactoCommand;
 import me.panem.transacto.Listeners.JoinListener;
 import me.panem.transacto.Commands.TestMySqliCommand;
 import me.panem.transacto.Utils.ConfigHandler;
-import me.panem.transacto.Utils.MysqliConnectionHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.io.IOException;
 import java.util.logging.Level;
 
 public final class Transacto extends JavaPlugin
@@ -29,8 +27,8 @@ public final class Transacto extends JavaPlugin
             conhan.setConfigurationFileToDefaultValues();
         }
         // While we only want the config to be created once, we want the values to be set every single time
-        conhan.InititalizeAllValuesToBeSetToValuesFromConfigurationFile();
-        
+        conhan.InitializeAllValuesToBeSetToValuesFromConfigurationFile();
+
         getLogger().log(Level.FINE, "Enabling Transacto");
         // Listeners
         PluginManager pluginManager = Bukkit.getPluginManager();
