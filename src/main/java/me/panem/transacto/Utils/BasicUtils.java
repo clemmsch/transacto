@@ -26,4 +26,9 @@ public class BasicUtils
         result = foo;
         return result;
     }
+
+    //TODO Add functionality
+    public boolean IsPlayerInDatabase(Player player) {
+        return true;
+    }
 }
