@@ -36,6 +36,7 @@ public class TestMySqliCommand implements CommandExecutor
             sender.sendMessage("§e Password: " + handler.getMysqliPassword());
             sender.sendMessage("§3 Port: " + handler.getMysqliPort());
             sender.sendMessage("§4 Socket: " + handler.getMysqliSocket());
+            sender.sendMessage("§4 Dbname: " + handler.getMysqliDbname());
 
         } else {
             sender.sendMessage("§6§lTransacto-Mysqli-Connection-Tester: \n §cFailed to connect!");

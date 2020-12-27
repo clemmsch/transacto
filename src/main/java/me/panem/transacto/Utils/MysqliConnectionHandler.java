@@ -11,9 +11,8 @@ public class MysqliConnectionHandler
     private static String host;
     private static String username;
     private static String password;
-    // TODO Do we really need a dbname?
-    // private static String dbname;
-    private static int port;
+    private static String dbname;
+    private static String port;
     private static String socket;
 
     public boolean TestMysqliConnection() {
@@ -37,12 +36,15 @@ public class MysqliConnectionHandler
         return password;
     }
 
-    public int getMysqliPort() {
+    public String getMysqliPort() {
         return port;
     }
 
     public String getMysqliSocket() {
         return socket;
+    }
+    public String getMysqliDbname() {
+        return dbname;
     }
 
     // The getters have to be lonely, let's give them some setters
@@ -56,9 +58,10 @@ public class MysqliConnectionHandler
         password = newPassword;
     }
 
-    public void setMysqliPort(int newPort) {
+    public void setMysqliPort(String newPort) {
         port = newPort;
     }
 
     public void setMysqliSocket(String newSocket) { socket = newSocket; }
+    public void setMysqliDbname(String newDb) { dbname = newDb; }
 }

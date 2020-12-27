@@ -1,7 +1,16 @@
 package me.panem.transacto.Utils;
 
 import com.avaje.ebean.validation.NotNull;
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import org.bukkit.entity.Player;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.net.URL;
+import java.nio.charset.StandardCharsets;
+import java.util.Base64;
 
 public class BasicUtils
 {
@@ -31,4 +40,5 @@ public class BasicUtils
     public boolean IsPlayerInDatabase(Player player) {
         return true;
     }
+
 }
