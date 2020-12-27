@@ -1,6 +1,6 @@
-package me.panem.transacto.Commands;
+package me.panem.transacto.commands;
 
-import me.panem.transacto.Utils.MysqliConnectionHandler;
+import me.panem.transacto.utils.MysqliConnectionHandler;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -15,19 +15,19 @@ public class TestMySqliCommand implements CommandExecutor
         if (sender instanceof Player) {
             Player player = (Player) sender;
             if (player.hasPermission("transacto.test.mysqli")) {
-                TestMysqliConnectionImplementation(sender);
+                testMysqliConnectionImplementation(sender);
             }
         } else {
             // It is a console which means that we do not have to do permission checks :)
-            TestMysqliConnectionImplementation(sender);
+            testMysqliConnectionImplementation(sender);
         }
         return true;
     }
 
-    private void TestMysqliConnectionImplementation(CommandSender sender) {
+    private void testMysqliConnectionImplementation(CommandSender sender) {
         /* This will either return true if it did not fail or false if it has failed.*/
         MysqliConnectionHandler handler = new MysqliConnectionHandler();
-        if (handler.TestMysqliConnection()) {
+        if (handler.testMysqliConnection()) {
             // It has not failed
             // TODO (!!!!) REMOVE THIS THIS IS VERY DANGEROUS!!!!!!!!
             sender.sendMessage("§6§lTransacto-Mysqli-Connection-Tester: \n §aSuccessfully connected!");

@@ -1,4 +1,4 @@
-package me.panem.transacto.Commands;
+package me.panem.transacto.commands;
 
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;

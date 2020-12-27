@@ -1,4 +1,4 @@
-package me.panem.transacto.Utils;
+package me.panem.transacto.utils;
 
 import me.panem.transacto.Transacto;
 import org.bukkit.configuration.file.FileConfiguration;
@@ -17,7 +17,7 @@ public class ConfigHandler
         Transacto.getPlugin().saveConfig();
     }
 
-    public void InitializeAllValuesToBeSetToValuesFromConfigurationFile() {
+    public void initializeAllValuesToBeSetToValuesFromConfigurationFile() {
         FileConfiguration config = Transacto.getPlugin().getConfig();
 
         // Mysqli Values

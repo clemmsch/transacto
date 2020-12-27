@@ -1,9 +1,4 @@
-package me.panem.transacto.Utils;
-
-import me.panem.transacto.Transacto;
-import org.bukkit.command.BlockCommandSender;
-import org.bukkit.command.CommandSender;
-import org.bukkit.configuration.file.FileConfiguration;
+package me.panem.transacto.utils;
 
 public class MysqliConnectionHandler
 {
@@ -15,7 +10,7 @@ public class MysqliConnectionHandler
     private static String port;
     private static String socket;
 
-    public boolean TestMysqliConnection() {
+    public boolean testMysqliConnection() {
         // TODO Implement
 
         return true;

@@ -1,17 +1,16 @@
 package me.panem.transacto;
 
-import me.panem.transacto.Commands.PayCommand;
-import me.panem.transacto.Commands.TransactoCommand;
-import me.panem.transacto.Listeners.JoinListener;
-import me.panem.transacto.Commands.TestMySqliCommand;
-import me.panem.transacto.SQL.MySql;
-import me.panem.transacto.Utils.ConfigHandler;
+import me.panem.transacto.commands.PayCommand;
+import me.panem.transacto.commands.TransactoCommand;
+import me.panem.transacto.listeners.JoinListener;
+import me.panem.transacto.commands.TestMySqliCommand;
+import me.panem.transacto.sql.MySql;
+import me.panem.transacto.utils.ConfigHandler;
 import org.bukkit.Bukkit;
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
-import java.sql.SQLException;
 import java.util.logging.Level;
 
 public final class Transacto extends JavaPlugin
@@ -33,7 +32,7 @@ public final class Transacto extends JavaPlugin
             conhan.setConfigurationFileToDefaultValues();
         }
         // While we only want the config to be created once, we want the values to be set every single time
-        conhan.InitializeAllValuesToBeSetToValuesFromConfigurationFile();
+        conhan.initializeAllValuesToBeSetToValuesFromConfigurationFile();
 
         ///////////////////// GENERAL SPIGOT LOGIC ////////////////////////////
 

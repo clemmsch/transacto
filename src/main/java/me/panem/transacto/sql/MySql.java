@@ -1,6 +1,6 @@
-package me.panem.transacto.SQL;
+package me.panem.transacto.sql;
 
-import me.panem.transacto.Utils.MysqliConnectionHandler;
+import me.panem.transacto.utils.MysqliConnectionHandler;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

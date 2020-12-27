@@ -1,23 +1,20 @@
-package me.panem.transacto.Commands;
+package me.panem.transacto.commands;
 
 import org.bukkit.*;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.command.defaults.GameRuleCommand;
 import org.bukkit.entity.Player;
-import me.panem.transacto.Utils.BasicUtils;
+import me.panem.transacto.utils.BasicUtils;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.inventory.InventoryClickEvent;
-import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.inventory.meta.SkullMeta;
 import org.jetbrains.annotations.NotNull;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 
 public class PayCommand implements CommandExecutor, Listener // We need the listener to cancel any GUI events while the inventory is open
@@ -41,7 +38,7 @@ public class PayCommand implements CommandExecutor, Listener // We need the list
             BasicUtils utils = new BasicUtils();
             player = (Player) sender;
             // Does the player have enough money?
-            if (utils.DoesPlayerHaveEnoughMoney(player, 0))
+            if (utils.doesPlayerHaveEnoughMoney(player, 0))
             {
                 // Are there enough arguments? We do not want it to be able to not sender any money
                 if (args.length < 2) {
@@ -62,7 +59,7 @@ public class PayCommand implements CommandExecutor, Listener // We need the list
                         * is a String / Any other value than an integer. Using a function
                         * like this (GetIntFromArgs) will prevent the program from making an
                         * error if the player inputs a string.*/
-                        amount = utils.GetIntFromArgs(args, 1);
+                        amount = utils.getIntFromArgs(args, 1);
                         // But it is not allowed to be below 0, remember that.
                         if (amount <= 0) {
                             player.sendMessage("§cPlease enter a valid amount (Positive Integer)");
@@ -83,7 +80,7 @@ public class PayCommand implements CommandExecutor, Listener // We need the list
                             glass.setItemMeta(glassMeta);
 
                             // Setting up the confirm dye (Default values)
-                            ItemStack confirmDye = new ItemStack(Material.WOOL, 1 /*(byte) 5 */);
+                            ItemStack confirmDye = new ItemStack(Material.WOOL, 1, (short) 10);
                             ItemMeta confirmDyeMeta = glass.getItemMeta();
                             confirmDyeMeta.setDisplayName("§a§lCONFIRM");
                             confirmDye.setItemMeta(confirmDyeMeta);

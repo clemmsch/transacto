@@ -1,6 +1,6 @@
-package me.panem.transacto.Listeners;
+package me.panem.transacto.listeners;
 
-import me.panem.transacto.Utils.BasicUtils;
+import me.panem.transacto.utils.BasicUtils;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -20,7 +20,7 @@ public class JoinListener implements Listener
         * */
         Player player = event.getPlayer();
         BasicUtils utils = new BasicUtils();
-        utils.IsPlayerInDatabase(player);
+        utils.isPlayerInDatabase(player);
         // TODO Make this happen
     }
 }
